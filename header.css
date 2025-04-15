@@ -1,0 +1,70 @@
+:root{
+    width: 100%;
+}
+/*Header*/
+.body{
+    background-color: rgba(136, 136, 139, 0.354);
+}
+
+.main-header{
+    display: flex;
+    height: 40px;
+    flex-direction: row; 
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 20px;  
+}
+.top-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+    align-self: center;
+}
+.header-menu{
+    display:inline;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 50;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all ease-in-out 150ms;
+}
+.header-menu:hover{
+    color: rgb(20, 88, 183) ;
+    cursor: pointer;
+}  
+.top-logo{
+    color: rgb(20, 88, 183);
+    text-align: left;
+    width: 200px;
+    height: 40px;
+    text-wrap: nowrap;
+    font-weight: 1000;
+    font-size: 35px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.options{
+    color: rgb(20, 88, 183);
+    width: 200px;
+    text-wrap: nowrap;
+    text-align: left ;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    padding-left: 10px;
+    align-self: right;
+}
+/*BURGER MENU NOT SHOW*/
+.burger-menu, .burger-menu-btn{
+    display: none;
+}
+
+
+
+
+
+
