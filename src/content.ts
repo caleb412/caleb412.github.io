@@ -142,3 +142,13 @@ export const projects: Project[] = [
     repo: "#", // TODO
   },
 ];
+
+/** "Beyond code" strip near the end of the page: creative work outside the professional side. */
+export const beyondCode = {
+  eyebrow: "Beyond code",
+  title: "Sparking Tones.",
+  text: "Outside of software I play guitar and sing. Sparking Tones is the music project where that side of me lives: a Lusaka-based home for honest art, making music since 2022.",
+  url: "https://www.sparkingtones.com/",
+  cta: "Visit Sparking Tones",
+  motto: ["Make.", "Honest.", "Art."], // the project's own headline
+};
