@@ -1,5 +1,6 @@
 'use client';
 
+import { asset } from '@/lib/asset';
 import { Decal, Float, OrbitControls, Preload, useTexture, View } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { Suspense, useEffect, useRef, useState } from 'react';
@@ -11,7 +12,7 @@ type Tech = { name: string; icon: string };
  * Ported from the original template's Ball.jsx. Drag a ball to spin it.
  */
 function Ball({ icon, still }: { icon: string; still: boolean }) {
-  const [decal] = useTexture([icon]);
+  const [decal] = useTexture([asset(icon)]);
 
   return (
     <Float speed={still ? 0 : 2.5} rotationIntensity={still ? 0 : 1} floatIntensity={still ? 0 : 2}>
@@ -83,7 +84,7 @@ export default function TechBalls({ technologies }: { technologies: Tech[] }) {
             ) : (
               // No WebGL: show the flat logo on a dark disc instead
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={t.icon} alt="" className="h-24 w-24 rounded-full bg-[#3d3d3d] p-6 sm:h-28 sm:w-28" />
+              <img src={asset(t.icon)} alt="" className="h-24 w-24 rounded-full bg-[#3d3d3d] p-6 sm:h-28 sm:w-28" />
             )}
             <span className="text-center text-xs font-semibold tracking-wider text-taupe uppercase">{t.name}</span>
           </li>

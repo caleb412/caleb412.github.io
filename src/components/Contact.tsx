@@ -1,5 +1,6 @@
 'use client';
 
+import { asset } from '@/lib/asset';
 import Image from 'next/image';
 import { useState } from 'react';
 import { profile } from '@/content';
@@ -67,8 +68,8 @@ export default function Contact() {
               type="submit"
               className="group glass flex h-[50px] w-[130px] items-center justify-center gap-3 rounded-button font-beckman text-lg font-bold text-timber-wolf transition duration-200 hover:bg-battle-gray hover:text-eerie-black sm:text-xl">
               SEND
-              <Image src="/icons/send.png" alt="" width={24} height={24} className="group-hover:hidden" />
-              <Image src="/icons/sendHover.png" alt="" width={24} height={24} className="hidden group-hover:block" />
+              <Image src={asset('/icons/send.png')} alt="" width={24} height={24} className="group-hover:hidden" />
+              <Image src={asset('/icons/sendHover.png')} alt="" width={24} height={24} className="hidden group-hover:block" />
             </button>
           </form>
         </div>

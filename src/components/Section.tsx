@@ -2,14 +2,16 @@
 export default function Section({
   id,
   className = '',
+  style,
   children,
 }: {
   id?: string;
   className?: string;
+  style?: React.CSSProperties;
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className={`relative px-6 py-16 sm:px-16 sm:py-24 ${className}`}>
+    <section id={id} style={style} className={`relative px-6 py-16 sm:px-16 sm:py-24 ${className}`}>
       <div className="relative mx-auto w-full max-w-7xl">{children}</div>
     </section>
   );

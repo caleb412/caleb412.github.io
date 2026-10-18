@@ -1,5 +1,6 @@
 'use client';
 
+import { asset } from '@/lib/asset';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { navLinks, profile } from '@/content';
@@ -32,7 +33,7 @@ export default function Navbar() {
     <nav className="fixed top-0 z-20 w-full bg-flash-white/97 px-6 py-2 sm:px-16">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         <a href="#" className="flex items-center gap-3" onClick={() => setActive('')}>
-          <Image src="/logos/logo-black.png" alt="" width={48} height={48} className="h-11 w-11 sm:h-12 sm:w-12" />
+          <Image src={asset('/logos/logo-black.png')} alt="" width={48} height={48} className="h-11 w-11 sm:h-12 sm:w-12" />
           {/* TODO: replace with your own mark/wordmark in /public/logos */}
           <span className="font-mova text-xl tracking-[3px] text-eerie-black uppercase">{profile.firstName}</span>
         </a>
@@ -59,7 +60,7 @@ export default function Navbar() {
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
           onClick={() => setOpen(!open)}>
-          <Image src={open ? '/icons/close.png' : '/icons/menu.png'} alt="" width={30} height={30} />
+          <Image src={asset(open ? '/icons/close.png' : '/icons/menu.png')} alt="" width={30} height={30} />
         </button>
       </div>
 

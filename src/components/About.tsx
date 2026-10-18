@@ -1,3 +1,4 @@
+import { asset } from '@/lib/asset';
 import Image from 'next/image';
 import { about } from '@/content';
 import Reveal from './Reveal';
@@ -18,7 +19,7 @@ export default function About() {
           <li key={s.title}>
             <Reveal delay={i * 120}>
               <div className="flex min-h-[260px] flex-col items-center justify-center gap-6 rounded-tile bg-eerie-black px-8 py-10 shadow-card-light transition-transform duration-300 hover:-translate-y-1">
-                <Image src={s.icon} alt="" width={64} height={64} />
+                <Image src={asset(s.icon)} alt="" width={64} height={64} />
                 <h3 className="text-center font-beckman text-xl font-bold tracking-wide text-timber-wolf uppercase">
                   {s.title}
                 </h3>

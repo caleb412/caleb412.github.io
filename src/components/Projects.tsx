@@ -1,5 +1,6 @@
 'use client';
 
+import { asset } from '@/lib/asset';
 import Image from 'next/image';
 import { useState } from 'react';
 import { projects } from '@/content';
@@ -35,7 +36,7 @@ export default function Projects() {
               {/* Background: screenshot if provided, else a monochrome texture */}
               {p.image ? (
                 <Image
-                  src={p.image}
+                  src={asset(p.image)}
                   alt=""
                   fill
                   // Open card is ~900px wide on desktop (max-w-7xl row, flex 3.5), full width below lg
@@ -93,11 +94,11 @@ function ProjectButton({ href, label, icon }: { href: string; label: string; ico
       className="group glass flex h-[50px] items-center gap-2 rounded-button pr-4 pl-3 font-beckman font-bold whitespace-nowrap text-timber-wolf transition duration-200 hover:bg-battle-gray hover:text-eerie-black">
       {icon === 'pineapple' ? (
         <>
-          <Image src="/icons/pineapple.png" alt="" width={30} height={30} className="group-hover:hidden" />
-          <Image src="/icons/pineappleHover.png" alt="" width={30} height={30} className="hidden group-hover:block" />
+          <Image src={asset('/icons/pineapple.png')} alt="" width={30} height={30} className="group-hover:hidden" />
+          <Image src={asset('/icons/pineappleHover.png')} alt="" width={30} height={30} className="hidden group-hover:block" />
         </>
       ) : (
-        <Image src="/icons/github.png" alt="" width={24} height={24} className="rounded-full bg-night p-0.5" />
+        <Image src={asset('/icons/github.png')} alt="" width={24} height={24} className="rounded-full bg-night p-0.5" />
       )}
       {label.toUpperCase()}
     </a>

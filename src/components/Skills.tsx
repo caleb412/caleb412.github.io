@@ -1,5 +1,6 @@
 'use client';
 
+import { asset } from '@/lib/asset';
 import dynamic from 'next/dynamic';
 import { technologies } from '@/content';
 import Section from './Section';
@@ -15,7 +16,8 @@ export default function Skills() {
   return (
     <Section
       id="skills"
-      className="bg-night bg-[linear-gradient(165deg,rgba(20,20,20,0.85)_100%,rgba(109,109,116,0.8)_100%),url('/backgrounds/nairobi.jpg')] bg-cover bg-center">
+      className="bg-night bg-cover bg-center"
+      style={{ backgroundImage: `linear-gradient(165deg,rgba(20,20,20,0.85) 100%,rgba(109,109,116,0.8) 100%),url(${asset('/backgrounds/nairobi.jpg')})` }}>
       <SectionHeading eyebrow="My skills" title="Technologies." tone="dark" />
 
       {/* Not wrapped in <Reveal>: a CSS transform on an ancestor would break the fixed WebGL canvas */}

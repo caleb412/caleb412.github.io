@@ -1,3 +1,4 @@
+import { asset } from '@/lib/asset';
 import Image from 'next/image';
 import { profile } from '@/content';
 
@@ -6,8 +7,8 @@ export default function Hero() {
     <section className="relative h-svh min-h-[560px] w-full overflow-hidden">
       {/* World map under the diagonal split */}
       <picture>
-        <source media="(min-width: 640px)" srcSet="/backgrounds/bw-map.jpeg" />
-        <img src="/backgrounds/world-map.png" alt="" className="absolute inset-0 h-full w-full object-cover" />
+        <source media="(min-width: 640px)" srcSet={asset('/backgrounds/bw-map.jpeg')} />
+        <img src={asset('/backgrounds/world-map.png')} alt="" className="absolute inset-0 h-full w-full object-cover" />
       </picture>
       <div className="bg-hero-split absolute inset-0" />
 
@@ -17,7 +18,7 @@ export default function Hero() {
           With r = 64px, b = 96px and ~60px breathing room that gives the lg width formula below. */}
       <div className="absolute right-6 bottom-28 aspect-[1186/1400] w-36 overflow-hidden rounded-card border border-white/15 shadow-card xs:w-44 sm:right-16 sm:w-56 lg:bottom-24 lg:w-[clamp(200px,calc((40vw_+_40svh_-_220px)/2.18),440px)]">
         <Image
-          src={profile.photo}
+          src={asset(profile.photo)}
           alt={`Portrait of ${profile.name}`}
           fill
           priority
