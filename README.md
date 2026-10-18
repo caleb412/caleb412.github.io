@@ -4,4 +4,4 @@ Personal portfolio built with **Next.js 16 (App Router)**, **React 19**, **TypeS
 
 ## Credits
 
-The visual design comes from [shaqdeff/Portfolio-Template](https://github.com/shaqdeff/Portfolio-Template) (MIT). This is a rewrite in Next.js/TypeScript with new content. Its author asks for credit if the design is used largely unmodified.
+The visual design comes from [shaqdeff/Portfolio-Template](https://github.com/shaqdeff/Portfolio-Template) (MIT). 
